@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section with jQuery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a29e9e;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-section {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 10px;
+            box-shadow: 20px 20px 60px rgb(51, 49, 49)
+            ,inset -20px -20px 60px rgb(216, 214, 211);
+            border-radius: 40px;
+            
+
+        }
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .contact-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            background-color: rgb(243, 236, 236);
+        }
+        
+        .contact-option i {
+            font-size: 24px;
+            color: #0069d9;
+            margin-right: 10px;
+        }
+        .contact-option span {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        @media (max-width: 600px) {
+            .contact-option {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact-option i {
+                margin-bottom: 5px;
+            }
+        }
+        .hidden-info {
+            display: none;
+            color: #007BFF;
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-option" id="email-option">
+        <i class="fas fa-envelope"></i>
+        <span>Click here</span>
+        <span class="hidden-info">pk9369941258@gmail.com</span>
+    </div>
+    <div class="contact-option" id="mobile-option">
+        <i class="fas fa-phone-alt"></i>
+        <span>Click here</span>
+        <span class="hidden-info">Available only email message..</span>
+    </div>
+</div>
+
+<!-- jQuery and Font Awesome for icons -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.contact-option').on('click', function(){
+            $(this).find('.hidden-info').slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>
