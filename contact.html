@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Section with jQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +20,7 @@
             padding: 10px;
             box-shadow: 20px 20px 60px rgb(51, 49, 49)
             ,inset -20px -20px 60px rgb(216, 214, 211);
-            border-radius: 40px;
+        
             
 
         }
@@ -59,34 +61,124 @@
             color: #007BFF;
             padding: 10%;
         }
-        .btn button{
-       font-size: 35px;
-        color:white;
+        .btn button {
+       font-size: 20px;
         border-radius: 10px;
         padding: 8px;
-        border: none;
+        align-items: center;
         animation-name: image;
         animation-iteration-count: infinite;
         animation-duration: 1s;
-        margin: 10px;
+        
+        
     }
     @keyframes image {
         form {
-          background-color: grey;
+          background-color: rgb(178, 175, 203);
         }
         to {
-          background-color: white;
-          box-shadow: 0px 0px 30px 10px white;
+          background-color: rgb(26, 26, 32);
+          box-shadow: 0px 0px 30px 10px rgb(8, 83, 223);
         }
       }
       a{
-        text-decoration:none
+        text-decoration:none;
+        color: white;
       }
+      footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer ul li a:hover {
+    color: #ddd;
+}
+
+.social-media li a i {
+    font-size: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding-right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+
+    footer ul li {
+        margin: 5px;
+    }
+}
     </style>
 </head>
 <body>
 
 <div class="contact-section">
+
     <h2>Contact Us</h2>
     <div class="contact-option" id="email-option">
         <i class="fas fa-envelope"></i>
@@ -98,11 +190,22 @@
         <span>Click here</span>
         <span class="hidden-info">Available only email message..</span>
     </div>
-    <div classs ="btn">
-        <button><a href="index.html">Back</a></button>
-    </div>
+<div class="btn">
+    <button><a href="index.html">Back</a></button>
+</div>
 </div>
 
+<footer>
+    <div class="footer-content">
+        <h3>&copy; Design By Pradum Kumar.</h3>
+        <ul class="social-media">
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
 <!-- jQuery and Font Awesome for icons -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
